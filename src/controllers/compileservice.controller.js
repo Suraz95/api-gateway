@@ -5,7 +5,7 @@ const compileCode = async (req, res, next) => {
     const { code, stdin = "" } = req.body; // Extract from body
     const { language } = req.params; // Extract from URL param
 
-    const response = await compileService.compile(language, { code, stdin }); // ✅ Correct now
+    const response = await compileService.compile(language, { code, stdin }); 
     res.status(response.status).json(response.data);
   } catch (error) {
     next(error);

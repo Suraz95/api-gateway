@@ -1,5 +1,5 @@
-const { asyncHandler,ApiError,ApiResponse } = require('shared-utils');
-const { login, logout, register } = require("../services/authservice.js")
+const { asyncHandler, ApiError, ApiResponse } = require("shared-utils");
+const { login, logout, register } = require("../services/authservice.js");
 
 const signIn = asyncHandler(async (req, res) => {
   try {
@@ -41,5 +41,7 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 });
 module.exports = {
-  signIn,signOut,registerUser
+  signIn,
+  signOut,
+  registerUser,
 };
