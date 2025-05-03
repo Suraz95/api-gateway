@@ -19,7 +19,9 @@ app.use(express.json()); // To parse incoming requests with JSON payloads
 // Routes
 app.use("/auth", authRoutes); // Auth routes
 app.use("/compile", compileRoutes); // Compile routes
-
+app.get("/", (req, res) => {
+  res.send("hello-this is from api gate way");
+});
 // Start the server
 app.listen(config.port, () => {
   console.log(`API Gateway running at http://localhost:${config.port}`);
